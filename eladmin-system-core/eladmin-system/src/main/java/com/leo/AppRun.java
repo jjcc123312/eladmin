@@ -15,9 +15,9 @@
  */
 package com.leo;
 
-import io.swagger.annotations.Api;
 import com.leo.annotation.rest.AnonymousGetMapping;
 import com.leo.utils.SpringContextHolder;
+import io.swagger.annotations.Api;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;

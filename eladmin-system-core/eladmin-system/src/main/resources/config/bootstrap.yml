@@ -1,0 +1,15 @@
+server:
+  port: 9201
+
+spring:
+  application:
+    name: eladmin-cloud-system
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        # 服务注册地址
+        server-addr: 127.0.0.1:8848
+
+
