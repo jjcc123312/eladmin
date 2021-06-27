@@ -1,0 +1,12 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    # 应用名称
+    name: eladmin-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: 6a70403c-1578-4fd0-a507-173a0349e8e0
