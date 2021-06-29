@@ -4,3 +4,27 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
         namespace: 094563e5-4ec6-41d1-9308-63df44b0e96c
+    gateway:
+      discovery:
+        locator:
+          lowerCaseServiceId: true
+          enabled: true
+      routes:
+        - id: test
+          uri: https://www.oschina.net
+          predicates:
+            - Path=/oschina
+          filters:
+            - StripPrefix=1
+        - id: eladm-system
+          uri: lb://eladmin-cloud-system
+          predicates:
+            - Path=/system/**
+          filters:
+            - StripPrefix=1
+        - id: eladmin-auth
+          uri: lb://eladmin-auth
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1

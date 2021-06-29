@@ -1,0 +1,9 @@
+server:
+  port: 9200
+
+spring:
+  application:
+    # 应用名称
+    name: eladmin-auth
+  profiles:
+    active: dev
