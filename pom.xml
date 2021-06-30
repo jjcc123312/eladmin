@@ -8,6 +8,9 @@
     <artifactId>eladmin-cloud</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1</version>
+    <modules>
+        <module>eladmin-common-core</module>
+    </modules>
 
     <name>EL-ADMIN-CLOUD 后台管理</name>
     <description>eladmin微服务系统</description>
