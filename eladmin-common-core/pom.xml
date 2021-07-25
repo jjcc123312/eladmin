@@ -32,6 +32,7 @@
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
         <commons-lang3.version>3.11</commons-lang3.version>
         <mybatis-plus.version>3.4.3.1</mybatis-plus.version>
+        <hutool.version>5.7.3</hutool.version>
     </properties>
 
     <modules>
@@ -93,6 +94,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--工具包-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
         </dependency>
 
     </dependencies>
