@@ -16,11 +16,6 @@
 package com.leo.modules.security.rest;
 
 import cn.hutool.core.util.IdUtil;
-import com.wf.captcha.base.Captcha;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import com.leo.annotation.rest.AnonymousDeleteMapping;
 import com.leo.annotation.rest.AnonymousGetMapping;
 import com.leo.annotation.rest.AnonymousPostMapping;
@@ -30,13 +25,18 @@ import com.leo.modules.security.config.bean.LoginCodeEnum;
 import com.leo.modules.security.config.bean.LoginProperties;
 import com.leo.modules.security.config.bean.SecurityProperties;
 import com.leo.modules.security.security.TokenProvider;
+import com.leo.modules.security.service.OnlineUserService;
 import com.leo.modules.security.service.dto.AuthUserDto;
 import com.leo.modules.security.service.dto.JwtUserDto;
-import com.leo.modules.security.service.OnlineUserService;
-import com.leo.utils.RsaUtils;
 import com.leo.utils.RedisUtils;
+import com.leo.utils.RsaUtils;
 import com.leo.utils.SecurityUtils;
 import com.leo.utils.StringUtils;
+import com.wf.captcha.base.Captcha;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -44,7 +44,11 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
