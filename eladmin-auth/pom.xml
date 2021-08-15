@@ -92,6 +92,19 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
+        <!-- common-core -->
+        <dependency>
+            <groupId>com.leo</groupId>
+            <artifactId>elamdin-common-core-core</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
